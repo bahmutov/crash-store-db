@@ -32,9 +32,12 @@ function initCrashStoreDatabase() {
   return dbInit.then(function (db) {
     console.log('initialized db store');
 
-    db.addApplicationKey = addApplicationKey.bind(null, db);
-    db.isValidApplicationKey = isValidApplicationKey.bind(null, db);
-    db.storeException = storeException.bind(null, db);
+    db.api = {
+      addApplicationKey: addApplicationKey.bind(null, db),
+      isValidApplicationKey: isValidApplicationKey.bind(null, db),
+      storeException: storeException.bind(null, db)
+    };
+
     return db;
   });
 }
