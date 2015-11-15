@@ -1,0 +1,29 @@
+{
+  "name": "crash-store-db",
+  "version": "1.0.0",
+  "description": "Actual data store for reported JavaScript exceptions",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahmutov/crash-store-db.git"
+  },
+  "keywords": [
+    "crash",
+    "exception",
+    "error",
+    "runtime",
+    "store",
+    "db"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/crash-store-db/issues"
+  },
+  "homepage": "https://github.com/bahmutov/crash-store-db#readme"
+}
