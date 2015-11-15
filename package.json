@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "description": "Actual data store for reported JavaScript exceptions",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "bluebird": "3.0.5",
+    "check-more-types": "2.1.2",
+    "kerberos": "0.0.17",
+    "lazy-ass": "1.0.0",
+    "mongoose": "4.2.5",
+    "nconf": "0.8.2"
+  },
+  "devDependencies": {
+    "git-issues": "1.1.0",
+    "pre-git": "1.2.11"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-issues && commit-wizard",
+    "issues": "git-issues"
   },
   "repository": {
     "type": "git",
@@ -25,5 +37,17 @@
   "bugs": {
     "url": "https://github.com/bahmutov/crash-store-db/issues"
   },
-  "homepage": "https://github.com/bahmutov/crash-store-db#readme"
+  "homepage": "https://github.com/bahmutov/crash-store-db#readme",
+  "config": {
+    "pre-git": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": [],
+      "pre-push": [],
+      "post-commit": [],
+      "post-merge": []
+    }
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }
