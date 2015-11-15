@@ -1,11 +1,15 @@
 var nconf = require('nconf');
 
-nconf.argv()
-  .env()
-  .file({ file: __dirname + '/../dev-config.json' })
-  .defaults({
-    PORT: 3010,
-    MONGOLAB_URI: ''
-  });
+// nconf could be configured by an actual application
+if (!nconf.configured) {
+  nconf.argv()
+    .env()
+    .file({ file: __dirname + '/../dev-config.json' })
+    .defaults({
+      PORT: 3010,
+      MONGOLAB_URI: ''
+    });
+  nconf.configured = true;
+}
 
 module.exports = nconf;
