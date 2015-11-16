@@ -12,11 +12,13 @@
     "nconf": "0.8.2"
   },
   "devDependencies": {
+    "eslint": "1.9.0",
     "git-issues": "1.1.0",
     "pre-git": "1.2.11"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint index.js src/**/*.js",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues"
   },
@@ -41,7 +43,9 @@
   "config": {
     "pre-git": {
       "commit-msg": "validate-commit-msg",
-      "pre-commit": [],
+      "pre-commit": [
+        "npm run lint"
+      ],
       "pre-push": [],
       "post-commit": [],
       "post-merge": []

@@ -20,10 +20,14 @@ function addApplicationKey(db, name) {
 }
 
 function isValidApplicationKey(db, key) {
+  la(check.unemptyString(key), 'missing or invalid key', key);
   return Promise.reject();
 }
 
 function storeException(db, key, exceptionInformation) {
+  la(check.unemptyString(key), 'missing or invalid key', key);
+  la(check.object(exceptionInformation),
+    'invalid crash info', exceptionInformation);
   return Promise.reject();
 }
 
