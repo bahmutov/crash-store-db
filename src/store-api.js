@@ -1,6 +1,7 @@
 var la = require('lazy-ass');
 var check = require('check-more-types');
 var Promise = require('bluebird');
+var AppKeys = require('./models/app-keys');
 
 function addApplicationKey(db, name) {
   la(db, 'missing db');
@@ -8,11 +9,7 @@ function addApplicationKey(db, name) {
   return Promise.reject();
 }
 
-function isValidApplicationKey(db, key) {
-  la(check.unemptyString(key), 'missing or invalid key', key);
-  return Promise.reject();
-}
-
+var apiKeys = require('./models/api-keys');
 var saveCrash = require('./models/crashes');
 
 function initStoreApi() {
@@ -22,8 +19,8 @@ function initStoreApi() {
 
     db.api = {
       addApplicationKey: addApplicationKey.bind(null, db),
-      isValidApplicationKey: isValidApplicationKey.bind(null, db),
-      saveCrash: saveCrash.bind(null, db)
+      isValidApplicationKey: apiKeys.isValidKey,
+      saveCrash: saveCrash
     };
 
     return db;
