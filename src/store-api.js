@@ -3,13 +3,13 @@ var check = require('check-more-types');
 var Promise = require('bluebird');
 var AppKeys = require('./models/app-keys');
 
+// TODO: implement in AppKeys model
 function addApplicationKey(db, name) {
   la(db, 'missing db');
   la(check.unemptyString(name), 'missing app name', name);
   return Promise.reject();
 }
 
-var apiKeys = require('./models/api-keys');
 var saveCrash = require('./models/crashes');
 
 function initStoreApi() {
@@ -19,7 +19,7 @@ function initStoreApi() {
 
     db.api = {
       addApplicationKey: addApplicationKey.bind(null, db),
-      isValidApplicationKey: apiKeys.isValidKey,
+      isValidApplicationKey: AppKeys.isValidKey,
       saveCrash: saveCrash
     };
 

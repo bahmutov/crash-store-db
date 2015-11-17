@@ -16,5 +16,8 @@ function testDummy() {
 var setupApi = require('./src/store-api');
 setupApi()
   .then(testDummy)
-  .catch(console.error.bind(console));
-// TODO implement closing the connection and exit
+  .catch(console.error.bind(console))
+  .then(function () {
+    console.log('disconnecting from DB');
+    require('mongoose').disconnect();
+  });
