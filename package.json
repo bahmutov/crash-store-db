@@ -18,7 +18,7 @@
     "semantic-release": "^4.3.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint index.js src/**/*.js",
     "lint": "eslint index.js src/**/*.js",
     "commit": "git-issues && commit-wizard",
     "issues": "git-issues",
