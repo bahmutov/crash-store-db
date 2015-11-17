@@ -24,12 +24,7 @@ function isValidApplicationKey(db, key) {
   return Promise.reject();
 }
 
-function storeException(db, key, exceptionInformation) {
-  la(check.unemptyString(key), 'missing or invalid key', key);
-  la(check.object(exceptionInformation),
-    'invalid crash info', exceptionInformation);
-  return Promise.reject();
-}
+var saveCrash = require('./src/models/crashes');
 
 function initCrashStoreDatabase() {
   var dbInit = require('./src/db');
@@ -39,7 +34,7 @@ function initCrashStoreDatabase() {
     db.api = {
       addApplicationKey: addApplicationKey.bind(null, db),
       isValidApplicationKey: isValidApplicationKey.bind(null, db),
-      storeException: storeException.bind(null, db)
+      saveCrash: saveCrash.bind(null, db)
     };
 
     return db;
