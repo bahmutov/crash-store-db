@@ -2,7 +2,7 @@
   "name": "crash-store-db",
   "version": "1.1.1",
   "description": "Actual data store for reported JavaScript exceptions",
-  "main": "index.js",
+  "main": "src/store-api.js",
   "dependencies": {
     "bluebird": "3.0.5",
     "check-more-types": "2.1.2",
