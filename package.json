@@ -1,8 +1,8 @@
 {
   "name": "crash-store-db",
-  "version": "1.1.1",
   "description": "Actual data store for reported JavaScript exceptions",
   "main": "src/store-api.js",
+  "version": "0.0.0-semantic-release",
   "dependencies": {
     "bluebird": "3.0.5",
     "check-more-types": "2.1.2",
@@ -14,17 +14,19 @@
   "devDependencies": {
     "eslint": "1.9.0",
     "git-issues": "1.1.0",
-    "pre-git": "1.2.11"
+    "pre-git": "1.2.11",
+    "semantic-release": "^4.3.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint index.js src/**/*.js",
     "commit": "git-issues && commit-wizard",
-    "issues": "git-issues"
+    "issues": "git-issues",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bahmutov/crash-store-db.git"
+    "url": "https://github.com/bahmutov/crash-store-db.git"
   },
   "keywords": [
     "crash",

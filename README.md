@@ -2,6 +2,11 @@
 
 > Actual data store for reported JavaScript exceptions
 
+[![NPM][crash-store-db-icon] ][crash-store-db-url]
+
+[![Build status][crash-store-db-ci-image] ][crash-store-db-ci-url]
+[![semantic-release][semantic-image] ][semantic-url]
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2015
@@ -15,7 +20,7 @@ License: MIT - do anything with the code, but don't blame me if it does not work
 Spread the word: tweet, star on github, etc.
 
 Support: if you find any problems with this module, email / tweet /
-[open issue](https://github.com/bahmutov/crash-store-db/issues) on Github
+[open issue](https://github.com/bahmutov/crash-store-db-db/issues) on Github
 
 ## MIT License
 
@@ -41,3 +46,10 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
+[crash-store-db-icon]: https://nodei.co/npm/crash-store-db.png?downloads=true
+[crash-store-db-url]: https://npmjs.org/package/crash-store-db
+[crash-store-db-ci-image]: https://travis-ci.org/bahmutov/crash-store-db.png?branch=master
+[crash-store-db-ci-url]: https://travis-ci.org/bahmutov/crash-store-db
+[semantic-image]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
+[semantic-url]: https://github.com/semantic-release/semantic-release
